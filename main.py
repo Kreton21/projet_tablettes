@@ -9,7 +9,7 @@ fich.writelines(
 ["<!DOCTYPE html>\n","<html>\n", "<head>\n","<title >Table de multiplication </title>\n",\
 "</head>\n",
  "<body>\n","<h1> Reserver Tablettes !</h1>","<ul>\n"])
-
+test
 fich.writelines("<div>")
 fich.writelines("<table>")
 def initTab(tabl):
