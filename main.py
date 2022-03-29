@@ -40,11 +40,25 @@ def initTab2(tabl):
     for i in range (10):
         fich.writelines("<tr>")
         fich.writelines("<td>"+str(i+8)+"h</td>")
-        for i in range (5):
-            fich.writelines("<td>"+"</td>")
+        for j in range (5):
+            noms=[]
+            nom=""
+            for k in tabl:
+                a = int(k["Horaire"])-8
+                if i == a and jours[j] == k["Jour"]:
+                    nom=k["Nom"]
+                    noms.append(nom)
+            if len(noms) == 1:
+                c="bgcolor=\"green\""
+            elif len(noms)>1:
+                c="bgcolor=\"red\""
+                nom=noms[0]
+                for i in range (len(noms)-1):
+                    nom+=" et "+noms[i+1]
+            else: c=""
+
+            fich.writelines("<td "+c+">"+nom+"</td>")
         fich.writelines("</tr>")
-    fich.writelines("</table>")
-    fich.writelines("</div>")
 
 initTab(table)
 initTab2(table)
