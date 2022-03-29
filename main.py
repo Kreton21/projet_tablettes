@@ -7,11 +7,15 @@ print(table)
 fich = open("index.html", "w")
 fich.writelines(
 ["<!DOCTYPE html>\n","<html>\n", "<head>\n","<title >Table de multiplication </title>\n",\
-"</head>\n",
+"<script src=\"https://unpkg.com/@popperjs/core@2\"></script>",\
+"<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3\" crossorigin=\"anonymous\">",\
+"<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p\" crossorigin=\"anonymous\"></script>",\
+"<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js\"></script>",\
+"</head>\n",\
  "<body>\n","<h1> Reserver Tablettes !</h1>","<ul>\n"])
-test
+
 fich.writelines("<div>")
-fich.writelines("<table>")
+fich.writelines("<table class=\"table table-bordered >\"")
 def initTab(tabl):
     fich.writelines("<tr>"+"<td>"+"Nom"+"</td>"+"<td>"+"Jour"+"</td>"+"<td>"+"Horaire"+"</td>"+"<td>"+"Durée"+"</td>"+"</tr>")
     for i in tabl:
