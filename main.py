@@ -3,7 +3,7 @@ import csv
 d=open("Test.csv")
 table=list(csv.DictReader(d,delimiter=","))
 jours=["Lundi","Mardi","Mercredi","Jeudi","Vendredi"]
-print(table)
+print("Tout marche bien pr le moment")
 fich = open("index.html", "w")
 fich.writelines(
 ["<!DOCTYPE html>\n","<html>\n", "<head>\n","<title >Table de multiplication </title>\n",\
@@ -68,3 +68,4 @@ fich.writelines("</div>")
 
 fich.writelines(["</ul>\n","</body>\n","</html>\n"])
 fich.close()
+print("Programme fini....tu peux respirer")
