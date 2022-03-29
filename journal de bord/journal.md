@@ -20,5 +20,7 @@ Bon... C'est fini.
 
 ou pas
 
-
+Jour 1 vers 2 (entre les 2):
+Integration de lite-main vers fancy-main et debut de lecture de la documentation Bootstrap qui est d'ailleurs tres bien
+Je pense que le fait de suivre l'evolution d'un projet est tres interresant, je vais donc rajouter le Github du projet ci-dessous pour voir l'evolution du projet par commits.
 
