@@ -12,10 +12,17 @@ fich.writelines(
 "\n<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p\" crossorigin=\"anonymous\"></script>",\
 "\n<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js\"></script>",\
 "\n</head>\n",\
- "<body>\n","<h1> Reserver Tablettes !</h1>","<ul>\n"])
+ "<body >\n","<div style=\"height: 100%;\
+ background: repeating-linear-gradient(\
+  125deg,\
+  #3d3d3d,\
+  #3d3d3d 30px,\
+  #303030 50px,\
+  #303030 50px\
+)\";\>"])
 
-fich.writelines("\n<div>")
-fich.writelines("\n<table class=\"table table-bordered >\"")
+fich.writelines("\n<div class=\"container\" style=\"padding-top: 20px;padding-bottom: 500px\">")
+fich.writelines("\n<table class=\"table table-bordered table-dark table-striped table-hover >\"")
 def initTab(tabl):
     fich.writelines("<tr>"+"<td>"+"Nom"+"</td>"+"<td>"+"Jour"+"</td>"+"<td>"+"Horaire"+"</td>"+"<td>"+"Durée"+"</td>"+"</tr>")
     for i in tabl:
@@ -29,8 +36,8 @@ def genereTab(tabl,i):
     fich.writelines("<td>"+str(i["Duree"])+"h</td>")
 def initTab2(tabl):
     global jours
-    fich.writelines("<div>")
-    fich.writelines("<table>")
+    fich.writelines("<div class=\"container\">")
+    fich.writelines("<table class=\"table table-bordered table-dark table-striped table-hover>\">")
     fich.writelines("<tr>")
     fich.writelines("<td>"+"Heure"+"</td>")
     for i in range(5):
@@ -49,9 +56,9 @@ def initTab2(tabl):
                     nom=k["Nom"]
                     noms.append(nom)
             if len(noms) == 1:
-                c="bgcolor=\"green\""
+                c="class=\"table-success\""
             elif len(noms)>1:
-                c="bgcolor=\"red\""
+                c="class=\"table-danger\""
                 nom=noms[0]
                 for i in range (len(noms)-1):
                     nom+=" et "+noms[i+1]
@@ -63,9 +70,9 @@ def initTab2(tabl):
 initTab(table)
 initTab2(table)
 fich.writelines("</div>")
-fich.writelines("\n<a tabindex=\"0\" class=\"btn btn-lg btn-danger\" role=\"button\" data-bs-toggle=\"popover\" data-bs-trigger=\"hover focus\" title=\"Dismissible popover\" data-bs-content=\"And here's some amazing content. It's very engaging. Right?\">Dismissible popover</a>")
-fich.writelines("\n<script>var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle=\"popover\"]'))var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {return new bootstrap.Popover(popoverTriggerEl)})</script>")
+fich.writelines("\n<a tabindex=\"0\" class=\"btn btn-lg btn-danger\" role=\"button\" data-bs-toggle=\"popover\" data-bs-trigger=\"hover focus\" title=\"Dismissible popover\" data-bs-content=\"And here's some amazing content. It's very engaging. Right?\">Testo</a>")
+fich.writelines("\n<script>var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle=\"popover\"]'));var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {return new bootstrap.Popover(popoverTriggerEl)})</script>")
 fich.writelines("\n<script>var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {  trigger: 'focus'})</script>")
-
-fich.writelines(["</ul>\n","</body>\n","</html>\n"])
+fich.writelines("\n</div>")
+fich.writelines(["</body>\n","</html>\n"])
 fich.close()
