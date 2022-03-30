@@ -46,7 +46,7 @@ def initTab2(tabl):
     
     for i in range (10):
         fich.writelines("<tr>")
-        fich.writelines("<td><div style=\"offset:10px\">"+str(i+8)+"h</div></td>")
+        fich.writelines("<td><div style=\"  position: relative;left: -40px;top: -23px;\">"+str(i+8)+"h</div></td>")
         for j in range (5):
             noms=[]
             nom=""
