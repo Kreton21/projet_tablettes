@@ -54,14 +54,13 @@ def initTab2(tabl):
                 a = int(k["Horaire"])-8
                 if i >= a and i<a+int(k["Duree"]) and jours[j] == k["Jour"]:
                     nom=k["Nom"]
-                    noms.append(nom)
+                    noms.append([nom,int(k["Horaire"]),int(k["Duree"])])
             if len(noms) == 1:
-                c="class=\"table-success\""
+                c="style=\"popover-bg:black;\" data-bs-toggle=\"popover\" data-bs-trigger=\"hover focus\" title=\"Résérvation reussite\" data-bs-content=\""+nom+" as reserve une tablette de "+str(noms[0][1])+"h à "+str(noms[0][1]+noms[0][2])+"h\" class=\"table-success\""
+                nom="Réservé par "+nom
             elif len(noms)>1:
-                c="class=\"table-danger\""
-                nom=noms[0]
-                for i in range (len(noms)-1):
-                    nom+=" et "+noms[i+1]
+                c="data-bs-toggle=\"popover\" data-bs-trigger=\"hover focus\" title=\"Erreur de reservation\" data-bs-content=\"And here's some amazing content. It's very engaging. Right?\" class=\"table-danger\""
+                nom="Erreur Résérvation"
             else: c=""
 
             fich.writelines("<td "+c+">"+nom+"</td>")
