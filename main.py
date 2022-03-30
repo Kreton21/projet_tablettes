@@ -41,7 +41,7 @@ def initTab2(tabl):
             nom=""
             for k in tabl:
                 a = int(k["Horaire"])-8
-                if i == a and jours[j] == k["Jour"]:
+                if i >= a and i<a+int(k["Duree"]) and jours[j] == k["Jour"]:
                     nom=k["Nom"]
                     noms.append(nom)
             if len(noms) == 1:
