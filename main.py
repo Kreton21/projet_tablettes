@@ -6,7 +6,8 @@ jours=["Lundi","Mardi","Mercredi","Jeudi","Vendredi"]
 print(table)
 fich = open("index.html", "w")
 fich.writelines(
-["<!DOCTYPE html>\n","<html>\n", "<head>\n","<title >Table de multiplication </title>\n",\
+["<!DOCTYPE html>\n","<html>\n", "<head>\n","<title >Reservation Tablettes</title>\n",
+"\n<link rel=\"shortcut icon\" type=\"image/png\" href=\"/favicon.png\"/>",\
 "\n<script src=\"https://unpkg.com/@popperjs/core@2\"></script>",\
 "\n<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3\" crossorigin=\"anonymous\">",\
 "\n<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p\" crossorigin=\"anonymous\"></script>",\
@@ -69,7 +70,13 @@ def initTab2(tabl):
 initTab(table)
 initTab2(table)
 fich.writelines("</div>")
-fich.writelines("\n<a tabindex=\"0\" class=\"btn btn-lg btn-danger\" role=\"button\" data-bs-toggle=\"popover\" data-bs-trigger=\"hover focus\" title=\"Dismissible popover\" data-bs-content=\"And here's some amazing content. It's very engaging. Right?\">Testo</a>")
+fich.writelines("\n<div style=\"text-align:center;\"class=\"container\"><pre>\n\
+\n██╗  ██╗██████╗ ███████╗████████╗ ██████╗ ███╗   ██╗\
+\n██║ ██╔╝██╔══██╗██╔════╝╚══██╔══╝██╔═══██╗████╗  ██║\
+\n█████╔╝ ██████╔╝█████╗     ██║   ██║   ██║██╔██╗ ██║\
+\n██╔═██╗ ██╔══██╗██╔══╝     ██║   ██║   ██║██║╚██╗██║\
+\n██║  ██╗██║  ██║███████╗   ██║   ╚██████╔╝██║ ╚████║\
+\n╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝   ╚═╝    ╚═════╝ ╚═╝  ╚═══╝</pre></div>")
 fich.writelines("\n<script>var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle=\"popover\"]'));var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {return new bootstrap.Popover(popoverTriggerEl)})</script>")
 fich.writelines("\n<script>var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {  trigger: 'focus'})</script>")
 fich.writelines("\n</div>")
