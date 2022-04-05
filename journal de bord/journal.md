@@ -29,3 +29,5 @@ Le fancy-main est a present fini et j'ai rajoute le ASCII art obligatoire.
 
 Jour 3:
 J'arrondis les bords de mon projet et je finalise certaines fonctions pour regler les fautes de grammaire.Note to self: Faire attention aux for i in range et de ne pas reutilliser i dans la boucle car ca risque de faire des erreurs d'assignation de memoire. Appart ce petit obstacle le developpement c'est passe sans grande difficulte et j'ai beacoup appris sur HTML.
+D'aileurs n'hesitez pas a aller voir mon github pour suivre l'evolution du projet commit par commit:
+https://github.com/Kreton21/projet_tablettes
