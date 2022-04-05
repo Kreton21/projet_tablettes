@@ -1,5 +1,6 @@
 import os as os
 import csv
+tablettes=5
 d=open("Test.csv")
 table=list(csv.DictReader(d,delimiter=","))
 jours=["Lundi","Mardi","Mercredi","Jeudi","Vendredi"]
@@ -21,7 +22,7 @@ fich.writelines(
   #303030 50px,\
   #303030 50px\
 )\";\>"])
-
+fich.writelines("\n<h1 align=\"center\">Nombre de tablettes = "+str(tablettes)+"</h1>")
 fich.writelines("\n<div class=\"container\" style=\"padding-top: 20px;padding-bottom: 500px\">")
 fich.writelines("\n<table class=\"table table-bordered table-dark table-striped table-hover >\"")
 def initTab(tabl):
@@ -58,10 +59,23 @@ def initTab2(tabl):
                     noms.append([nom,int(k["Horaire"]),int(k["Duree"])])
             if len(noms) == 1:
                 c="style=\"popover-bg:black;\" data-bs-toggle=\"popover\" data-bs-trigger=\"hover focus\" title=\"Résérvation reussite\" data-bs-content=\""+nom+" as reserve une tablette de "+str(noms[0][1])+"h à "+str(noms[0][1]+noms[0][2])+"h\" class=\"table-success\""
-                nom="Réservé par "+nom
-            elif len(noms)>1:
-                c="data-bs-toggle=\"popover\" data-bs-trigger=\"hover focus\" title=\"Erreur de reservation\" data-bs-content=\"And here's some amazing content. It's very engaging. Right?\" class=\"table-danger\""
-                nom="Erreur Résérvation"
+                nom="Réservé par "+str(len(noms))+" perssone"
+            elif len(noms)>1 and len(noms)<tablettes:
+                z=""
+                for g in range(len(noms)):
+                    z+=noms[g][0]
+                    if g+1 < len(noms):
+                        z+=" et "
+                c="style=\"popover-bg:black;\" data-bs-toggle=\"popover\" data-bs-trigger=\"hover focus\" title=\"Résérvation reussite\" data-bs-content=\""+z+" ont reserver des tablettes a cette Heure\" class=\"table-success\""
+                nom="Réservé par "+str(len(noms))+" perssones"
+            elif len(noms)>tablettes:
+                z=""
+                for g in range(len(noms)):
+                    z+=noms[g][0]
+                    if g+1 < len(noms):
+                        z+=" et "
+                c="data-bs-toggle=\"popover\" data-bs-trigger=\"hover focus\" title=\"Erreur de reservation\" data-bs-content=\""+z+" ont reserve a cette heure. Les tablettes ne suffisent pas\" class=\"table-danger\""
+                nom="Erreur de reservation ("+str(len(noms))+")"
             else: c=""
 
             fich.writelines("<td "+c+">"+nom+"</td>")
