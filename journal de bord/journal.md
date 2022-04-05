@@ -7,7 +7,7 @@ Helas grave erreur, As we say, you can't teach an old dog new tricks
 Il prefere rester sur edupython car il se sent plus a l'aise. Cela ne me derange pas plus que ca tant qu'il as acces a mon Github et sait telecharger le code-source.
 En plus de cela je decide de separer le projet en deux branches distinctes:
 lite-main et fancy-main 
-lite-main va devenir le projet bare-bones sans aucun CSS ni Javascript, une base simple a comprendre sur laquelle Emrys pourra developper ses idees et eventuellement son client pyhton.
+lite-main va devenir le projet bare-bones sans aucun CSS ni Javascript, une base simple a comprendre sur laquelle Emrys pourra developper ses idees et eventuellement son client python.
 Vu qu'il rejette les librairies je ne vais rien imposer car je trouve ca respectable d'avoir des ideologies meme quand je trouve ca inutile.
 Dont l'arivee de fancy-main rempli a en deborder de toutes les nouvelles technologies inutiles et libraries CSS que je pourrais trouver.
 Cela s'annonce assez drole.
