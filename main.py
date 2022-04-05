@@ -22,8 +22,15 @@ fich.writelines(
   #303030 50px,\
   #303030 50px\
 )\";\>"])
-fich.writelines("\n<h1 align=\"center\">Nombre de tablettes = "+str(tablettes)+"</h1>")
-fich.writelines("\n<div class=\"container\" style=\"padding-top: 20px;padding-bottom: 500px\">")
+fich.writelines("\n<div style=\"width:30%; height: 100%;\
+ background: repeating-linear-gradient(\
+  125deg,\
+  #9b9b9b,\
+  #9b9b9b 30px,\
+  #616161 50px,\
+  #616161 50px\
+)\"class=\"container rounded-pill\" align=\"center\"><p class=\"h1\">Nombre de tablettes :   "+str(tablettes)+"</p></div>")
+fich.writelines("\n<div class=\"container\" style=\"padding-top: 20px;padding-bottom: 500px; \">")
 fich.writelines("\n<table class=\"table table-bordered table-dark table-striped table-hover >\"")
 def initTab(tabl):
     fich.writelines("<tr>"+"<td>"+"Nom"+"</td>"+"<td>"+"Jour"+"</td>"+"<td>"+"Horaire"+"</td>"+"<td>"+"Durée"+"</td>"+"</tr>")
