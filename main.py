@@ -49,8 +49,8 @@ def initTab2(tabl):
             elif len(noms)>1:
                 c="bgcolor=\"red\""
                 nom=noms[0]
-                for i in range (len(noms)-1):
-                    nom+=" et "+noms[i+1]
+                for z in range (len(noms)-1):
+                    nom+=" et "+noms[z+1]
             else: c=""
 
             fich.writelines("<td "+c+">"+nom+"</td>")
