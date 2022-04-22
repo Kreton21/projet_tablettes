@@ -31,7 +31,7 @@ fich.writelines( # Injecter le plus de code inutile humainement possible dans ce
   #303030 50px\
 )\";\>"]) # Creation de l'arriere plan
 fich.writelines("\n<div style=\"width:30%; height: 100%;\
- background-color:#9b9b9b\"class=\"container rounded-pill\" align=\"center\"><p class=\"h1\">Nombre de tablettes :   "+str(tablettes)+"</p></div>")
+ background-color:#9b9b9b\"class=\"container rounded-pill\" align=\"center\"><p class=\"h1\">Nombre de tablettes :   "+str(tablettes)+"</p></div>") # Montrer le nombre de tablettes.
 fich.writelines("\n<div class=\"container\" style=\"padding-top: 20px;padding-bottom: 500px; \">")
 fich.writelines("\n<table class=\"table table-bordered table-dark table-striped table-hover >\"")
 def initTab(tabl):
