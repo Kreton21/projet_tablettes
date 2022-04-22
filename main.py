@@ -44,7 +44,7 @@ def initTab2(tabl): #Cette fonction va creer le Deuxieme Tableau
     # La boucle suivante va remplir le tableau
 
     for i in range (10): # Pour les 10 h de la journee i:
-        fich.writelines("<tr>") # creer une colonne
+        fich.writelines("\n<tr>") # creer une colonne
         fich.writelines("<td>"+str(i+8)+"h</td>") # Puis les remplir l'heure correspondante.
         for j in range (5): # Puis pour chaque jour j
             noms=[] 
