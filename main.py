@@ -1,12 +1,20 @@
+#Version trop style du projet
+# Les fonctions sont les memes, juste a la place de dire qui reserve une case, il indique le nombre de perssones qui ont reserves
+# Les perssones qui ont reserve cette case vont alors etre enumeres dans un popup.
+# Les commentaire sont donc specifiques a cette version
 import os as os
 import csv
+
+
 tablettes=5
+
+
 d=open("Test.csv")
 table=list(csv.DictReader(d,delimiter=","))
 jours=["Lundi","Mardi","Mercredi","Jeudi","Vendredi"]
-print(table)
 fich = open("index.html", "w")
-fich.writelines(
+
+fich.writelines( # Injecter le plus de code inutile humainement possible dans cette page. (Importation de boot-strap, pooperjs pr les popus et pleins d'autres.)
 ["<!DOCTYPE html>\n","<html>\n", "<head>\n","<title >Reservation Tablettes</title>\n",
 "\n<link rel=\"shortcut icon\" type=\"image/png\" href=\"/favicon.png\"/>",\
 "\n<script src=\"https://unpkg.com/@popperjs/core@2\"></script>",\
@@ -21,7 +29,7 @@ fich.writelines(
   #3d3d3d 30px,\
   #303030 50px,\
   #303030 50px\
-)\";\>"])
+)\";\>"]) # Creation de l'arriere plan
 fich.writelines("\n<div style=\"width:30%; height: 100%;\
  background-color:#9b9b9b\"class=\"container rounded-pill\" align=\"center\"><p class=\"h1\">Nombre de tablettes :   "+str(tablettes)+"</p></div>")
 fich.writelines("\n<div class=\"container\" style=\"padding-top: 20px;padding-bottom: 500px; \">")
@@ -84,7 +92,7 @@ def initTab2(tabl):
 
 initTab(table)
 initTab2(table)
-fich.writelines("</div>")
+fich.writelines("</div>") #Ascii art necessaire dans tout projet qui se respecte
 fich.writelines("\n<div style=\"text-align:center;\"class=\"container\"><pre>\n\
 \n██╗  ██╗██████╗ ███████╗████████╗ ██████╗ ███╗   ██╗\
 \n██║ ██╔╝██╔══██╗██╔════╝╚══██╔══╝██╔═══██╗████╗  ██║\
