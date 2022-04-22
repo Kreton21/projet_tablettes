@@ -1,24 +1,31 @@
-import os as os
-import csv
-d=open("Test.csv")
-table=list(csv.DictReader(d,delimiter=","))
-jours=["Lundi","Mardi","Mercredi","Jeudi","Vendredi"]
+import os as os #Importer OS pour modifier des fichiers depuis Python
+import csv #De meme pour l'interpreteur CSV
+
+
+d=open("Test.csv") # Ouvrir le fichier "Test.csv" sous la variable d
+table=list(csv.DictReader(d,delimiter=",")) # Transformer ce fichier en tableau de dictionaires utilisables dans le programme
+
 print("Tout marche bien pr le moment")
+
 fich = open("index.html", "w")
-fich.writelines(
+fich.writelines( # Initialisation du fichier HTML avec tt son boilerplate
 ["<!DOCTYPE html>\n","<html>\n", "<head>\n","<title >Table de multiplication </title>\n",\
 "</head>\n",
- "<body>\n","<h1> Reserver Tablettes !</h1>","<ul>\n"])
+ "<body>\n","<h1> Reserver Tablettes !</h1>","\n<ul>\n","<div>\n<table>"])
 
-fich.writelines("<div>")
-fich.writelines("<table>")
-def initTab(tabl):
+
+jours=["Lundi","Mardi","Mercredi","Jeudi","Vendredi"]
+
+
+def initTab(tabl): #Cette fonction crée les colonnes du premier tableau
     fich.writelines("<tr>"+"<td>"+"Nom"+"</td>"+"<td>"+"Jour"+"</td>"+"<td>"+"Horaire"+"</td>"+"<td>"+"Durée"+"</td>"+"</tr>")
-    for i in tabl:
-        fich.writelines("<tr>")
-        genereTab(table,i)
-        fich.writelines("</tr>")
-def genereTab(tabl,i):
+    for i in tabl:   #Pour nombre de perssones dans le fichier CSV faire:
+        fich.writelines("\n<tr>")  #Creeer une colonne de tableau 
+        genereTab(table,i)  # Et ensuite la remplir avec la fonction suivante
+        fich.writelines("\n</tr>")
+
+    
+def genereTab(tabl,i): # Pour chaque case du tableau introduire l'info correspondante.
     fich.writelines("<td>"+str(i["Nom"])+"</td>")
     fich.writelines("<td>"+str(i["Jour"])+"</td>")
     fich.writelines("<td>"+str(i["Horaire"])+"h</td>")
